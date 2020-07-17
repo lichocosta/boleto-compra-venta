@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Boleto Compraventa ONLINE</title>
         <script src="main.js" type="text/javascript"></script>
         <link rel="stylesheet" href="style.css">
@@ -40,7 +41,7 @@
                     </div>
 
                     <div class="inputs-3">
-                        <input type="checkbox" id="pote-check" onchange="showContent('pote-check', 'potencia')">Potencia (Watts, Cv, Hp)<br>
+                        <input type="checkbox" id="pote-check" onchange="showContent('pote-check', 'potencia')">Potencia (HP, CV, Watts)<br>
                         <input type="checkbox" id="color-check" onchange="showContent('color-check', 'color')">Color<br>
                         <input type="checkbox" id="eslo-check" onchange="showContent('eslo-check', 'eslora')">Eslora<br>
                         <input type="checkbox" id="manga-check" onchange="showContent('manga-check', 'manga')">Manga<br>
@@ -148,7 +149,7 @@
                 </div>
 
                 <div id="potencia" style="display: none;">
-                    <p class="line">Potencia (Watts, Cv, Hp): <span class="blank"></span>.</p>
+                    <p class="line">Potencia (HP, CV, Watts): <span class="blank"></span>.</p>
                 </div>
 
                 <div id="color" style="display: none;">
