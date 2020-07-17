@@ -6,36 +6,23 @@ header{
     text-align: center;
 }
 
-.general{
-    position: relative;
-    height: 350px; 
-}
-
-.invisible{
+.checkboxes{
     width: auto;
     background-color: #eee;
     overflow: hidden;
-    padding: 5px;
+    padding: 30px;
     border-radius: 5px;
 }
 
-.inputs-1{
-    height: 250px;
-    width: 33%;
-    float: left;
-    font-weight: bold;
+.checktitle{
+    margin-top: 0;
 }
 
-.inputs-3{
-    height: 250px;
-    width: 33%;
-    float: left;
-    font-weight: bold;
+.inputs{
+    display: flex;
 }
 
-.inputs-5{
-    height: 250px;
-    float: left;
+.inputs div{
     width: 33%;
     font-weight: bold;
 }
@@ -43,14 +30,13 @@ header{
 .firmas{
     display: flex;
     text-align: center;
+    justify-content: space-evenly;
 }
 
-.comprador{
-    width: 50%;
-}
-
-.vendedor{
-    width: 50%;
+.firma{
+    width: 35%;
+    border-bottom: 1px solid black;
+    height: 80px;
 }
 
 .VistaPrevia{
@@ -62,9 +48,6 @@ header{
     padding: 10px;
 }
 
-.titlevp{
-    
-}
 
 .line{
     display: flex;
@@ -100,7 +83,7 @@ header{
 
 .buttpos{
     text-align: center;
-    margin: auto;
+    margin: 20px auto;
 }
 
 footer{

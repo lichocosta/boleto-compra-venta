@@ -18,63 +18,59 @@
             </header>
 
             <hr>
+
         </div>
 
-        <section class="general">
+        <div class="checkboxes">
 
-            <div class="invisible">
+            <h2 class="checktitle">¿Que datos querés que tenga? Tildá los necesarios:</h2>
 
+            <div class="inputs">
 
-                <h2>¿Que datos querés que tenga? Tildá los necesarios:</h2>
+                <div>
+                    <input type="checkbox" id="marca-check" onchange="showContent('marca-check', 'marca')">Marca<br>
+                    <input type="checkbox" id="modelo-check" onchange="showContent('modelo-check', 'modelo')">Modelo<br>
+                    <input type="checkbox" id="modaño-check" onchange="showContent('modaño-check', 'modeloaño')">Modelo (año de fabricación)<br>
+                    <input type="checkbox" id="tipo-check" onchange="showContent('tipo-check', 'tipo')">Tipo<br>
+                    <input type="checkbox" id="domi-check" onchange="showContent('domi-check', 'dominio')">Dominio<br>
+                    <input type="checkbox" id="nserie-check" onchange="showContent('nserie-check', 'nserie')">N° de serie<br>
+                    <input type="checkbox" id="nmotor-check" onchange="showContent('nmotor-check', 'nmotor')">N° de motor<br>
+                    <input type="checkbox" id="nchasis-check" onchange="showContent('nchasis-check', 'nchasis')">N° de chasis<br>
+                </div>
 
-                <form>
+                <div>
+                    <input type="checkbox" id="pote-check" onchange="showContent('pote-check', 'potencia')">Potencia (HP, CV, Watts)<br>
+                    <input type="checkbox" id="color-check" onchange="showContent('color-check', 'color')">Color<br>
+                    <input type="checkbox" id="eslo-check" onchange="showContent('eslo-check', 'eslora')">Eslora<br>
+                    <input type="checkbox" id="manga-check" onchange="showContent('manga-check', 'manga')">Manga<br>
+                    <input type="checkbox" id="puntal-check" onchange="showContent('puntal-check', 'puntal')">Puntal<br>
+                    <input type="checkbox" id="largo-check" onchange="showContent('largo-check', 'largo')">Largo<br>
+                    <input type="checkbox" id="ancho-check" onchange="showContent('ancho-check', 'ancho')">Ancho<br>
+                    <input type="checkbox" id="alto-check" onchange="showContent('alto-check', 'alto')">Alto<br>
+                </div>
 
-                    <div class="inputs-1">
-                        <input type="checkbox" id="marca-check" onchange="showContent('marca-check', 'marca')">Marca<br>
-                        <input type="checkbox" id="modelo-check" onchange="showContent('modelo-check', 'modelo')">Modelo<br>
-                        <input type="checkbox" id="modaño-check" onchange="showContent('modaño-check', 'modeloaño')">Modelo (año de fabricación)<br>
-                        <input type="checkbox" id="tipo-check" onchange="showContent('tipo-check', 'tipo')">Tipo<br>
-                        <input type="checkbox" id="domi-check" onchange="showContent('domi-check', 'dominio')">Dominio<br>
-                        <input type="checkbox" id="nserie-check" onchange="showContent('nserie-check', 'nserie')">N° de serie<br>
-                        <input type="checkbox" id="nmotor-check" onchange="showContent('nmotor-check', 'nmotor')">N° de motor<br>
-                        <input type="checkbox" id="nchasis-check" onchange="showContent('nchasis-check', 'nchasis')">N° de chasis<br>
-                    </div>
-
-                    <div class="inputs-3">
-                        <input type="checkbox" id="pote-check" onchange="showContent('pote-check', 'potencia')">Potencia (HP, CV, Watts)<br>
-                        <input type="checkbox" id="color-check" onchange="showContent('color-check', 'color')">Color<br>
-                        <input type="checkbox" id="eslo-check" onchange="showContent('eslo-check', 'eslora')">Eslora<br>
-                        <input type="checkbox" id="manga-check" onchange="showContent('manga-check', 'manga')">Manga<br>
-                        <input type="checkbox" id="puntal-check" onchange="showContent('puntal-check', 'puntal')">Puntal<br>
-                        <input type="checkbox" id="largo-check" onchange="showContent('largo-check', 'largo')">Largo<br>
-                        <input type="checkbox" id="ancho-check" onchange="showContent('ancho-check', 'ancho')">Ancho<br>
-                        <input type="checkbox" id="alto-check" onchange="showContent('alto-check', 'alto')">Alto<br>
-                    </div>
-
-                    <div class="inputs-5">
-                        <input type="checkbox" id="peso-check" onchange="showContent('peso-check', 'peso')">Peso<br>
-                        <input type="checkbox" id="sup-check" onchange="showContent('sup-check', 'superf')">Superficie<br>
-                        <input type="checkbox" id="cuota-check" onchange="showContent('cuota-check', 'cuotas')">Cuotas (Precio de cada cuota)<br>
-                        <input type="checkbox" id="entrega-check" onchange="showContent('entrega-check', 'entrega')">Entrega en parte de pago<br>
-                        <input type="checkbox" id="precio-check" onchange="showContent('precio-check', 'precio')">Precio TOTAL<br>
-                        <input type="checkbox" id="dosr-check" onchange="showContent('dosr-check', 'dosr')">2 renglones para escritura manual<br>
-                        <input type="checkbox" id="cincor-check" onchange="showContent('cincor-check', 'cincor')">5 renglones para escritura manual<br>
-                        <input type="checkbox" id="trans-check" onchange="showContent('trans-check', 'trans')">El bien require transferencia<br>
-                    </div>
-            
-                </form>
-            
+                <div>
+                    <input type="checkbox" id="peso-check" onchange="showContent('peso-check', 'peso')">Peso<br>
+                    <input type="checkbox" id="sup-check" onchange="showContent('sup-check', 'superf')">Superficie<br>
+                    <input type="checkbox" id="cuota-check" onchange="showContent('cuota-check', 'cuotas')">Cuotas (Precio de cada cuota)<br>
+                    <input type="checkbox" id="entrega-check" onchange="showContent('entrega-check', 'entrega')">Entrega en parte de pago<br>
+                    <input type="checkbox" id="precio-check" onchange="showContent('precio-check', 'precio')">Precio TOTAL<br>
+                    <input type="checkbox" id="dosr-check" onchange="showContent('dosr-check', 'dosr')">2 renglones para escritura manual<br>
+                    <input type="checkbox" id="cincor-check" onchange="showContent('cincor-check', 'cincor')">5 renglones para escritura manual<br>
+                    <input type="checkbox" id="trans-check" onchange="showContent('trans-check', 'trans')">El bien require transferencia<br>
+                </div>
+        
             </div>
+        
+        </div>
 
-        </section>
+        
     
         <div class="resto">
         
             <div class="buttpos">
                 <button class="button" onclick="print()" style="vertical-align:middle"><span>IMPRIMIR </span></button>
             </div>
-            
-            <br>
 
             <hr>
 
@@ -281,20 +277,15 @@
     
             <div class="firmas">
 
-                <div class="vendedor">
-                    <strong>VENDEDOR</strong><br>
-                    <br>
-                    <br>
-                    <br>
-                    __________________________________
+                <div class="firma">
+
+                    <strong>VENDEDOR</strong>
+
                 </div>
 
-                <div class="comprador">
-                    <strong>COMPRADOR</strong><br>
-                    <br>
-                    <br>
-                    <br>
-                    __________________________________
+                <div class="firma">
+
+                    <strong>COMPRADOR</strong>
 
                 </div>
 
