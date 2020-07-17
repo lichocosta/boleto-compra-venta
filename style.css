@@ -7,9 +7,7 @@ header{
 }
 
 .checkboxes{
-    width: auto;
     background-color: #eee;
-    overflow: hidden;
     padding: 30px;
     border-radius: 5px;
 }
@@ -139,7 +137,7 @@ footer{
 @media print {
     
 
-    .general, .resto, .titulo, .footer {
+    .checkboxes, .resto, .titulo, .footer {
         display: none;
     }
 }
