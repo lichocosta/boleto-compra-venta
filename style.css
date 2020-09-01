@@ -139,6 +139,7 @@ footer{
 
     .checkboxes, .resto, .titulo, .footer {
         display: none;
+        font-family: Oswald, Arial, Helvetica, sans-serif;
     }
 }
 
