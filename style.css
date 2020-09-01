@@ -133,13 +133,12 @@ footer{
     right: 0;
 }
 
-
 @media print {
     
 
     .checkboxes, .resto, .titulo, .footer {
         display: none;
-        font-family: Oswald, Arial, Helvetica, sans-serif;
+        font-family: 'Oswald', Arial, Helvetica, sans-serif;
     }
 }
 
