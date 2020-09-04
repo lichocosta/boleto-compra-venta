@@ -50,16 +50,20 @@ header{
     text-align: center;
 }
 
+.titlev{
+    margin-top: -10px;
+}
+
 .line{
     display: flex;
-    margin: 5px 0;
-    line-height: 1.4;
+    margin: 2px 0;
+    line-height: 1.2;
 }
 
 .paragraph{
-    margin: 5px 0;
+    margin: 2px 0;
     text-align: justify;
-    line-height: 1.4;
+    line-height: 1.2;
 }
 
 .paragraph.single{
