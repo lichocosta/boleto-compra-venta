@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
         <title>Boleto Compraventa ONLINE</title>
         <script src="main.js" type="text/javascript"></script>
         <link rel="stylesheet" href="style.css">
@@ -20,32 +23,74 @@
         <link rel="icon" type="image/png" sizes="96x96" href="favicon.img/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon.img/favicon-16x16.png">
         <link rel="manifest" href="favicon.img/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
 
         <div class="titulo">
+
             <header>
 
                 <h1>Boleto Compra-Venta ONLINE</h1>
 
             </header>
 
+        </div>
+        
+    
+        <div class="adver">
+        
+            <hr>
+
+            <h2>Advertencia legal para el comprador</h2>
+
+            <p>
+                El boleto de compra venta es un documento de carácter NO público; por ende, el vendedor continuará siendo responsable civilmente hasta no realizarse el trámite de transferencia.<br>
+                Es decir, que el comprador no será "dueño legitimo" del bien hasta no efectuar la misma.<br>
+                <strong>Tenga en cuenta que no realizar este trámite puede causarle problemas.</strong>
+            </p>
+
             <hr>
 
         </div>
 
-        <div class="checkboxes">
 
-            <h2 class="checktitle">De acuerdo al bien que necesitas <u>comprar</u> o <u>vender</u> ¿Qué datos querés que tenga? Tildá los necesarios:</h2>
+        <div class="print">
 
-            <div class="inputs">
+            
+            <div class="buttpos">
+                <button class="button" onclick="print()" style="vertical-align:middle"><span>IMPRIMIR </span></button>
+            </div>
 
-                <div>
+
+            <div class="sizebutton">
+
+                <p>¿No entra en un página? <br> 
+                    Modificá el tamaño con estos botones:
+                </p>
+
+                <input type="button" value="AUMENTAR" onclick="increaseFontSizeBy1px()">
+
+                <input type="button" value="DISMINUIR" onclick="decreaseFontSizeBy1px()">
+
+            </div>
+
+
+        </div>
+
+        <br>
+
+
+        <div class="container">
+
+            <div class="checkboxes">
+
+                <h2 class="checktitle">De acuerdo al bien que necesitás <u>comprar</u> o <u>vender</u>, ¿qué datos querés que tenga? Tildá los necesarios:</h2>
+
+                <div class="inputs">
+
+                    
                     <label><input type="checkbox" id="marca-check" onchange="showContent('marca-check', 'marca')">Marca</label><br>
                     <label><input type="checkbox" id="modelo-check" onchange="showContent('modelo-check', 'modelo')">Modelo</label><br>
                     <label><input type="checkbox" id="modaño-check" onchange="showContent('modaño-check', 'modeloaño')">Modelo (año de fabricación)</label><br>
@@ -54,9 +99,7 @@
                     <label><input type="checkbox" id="nserie-check" onchange="showContent('nserie-check', 'nserie')">N° de serie</label><br>
                     <label><input type="checkbox" id="nmotor-check" onchange="showContent('nmotor-check', 'nmotor')">N° de motor</label><br>
                     <label><input type="checkbox" id="nchasis-check" onchange="showContent('nchasis-check', 'nchasis')">N° de chasis</label><br>
-                </div>
-
-                <div>
+                
                     <label><input type="checkbox" id="pote-check" onchange="showContent('pote-check', 'potencia')">Potencia (HP, CV, Watts)</label><br>
                     <label><input type="checkbox" id="color-check" onchange="showContent('color-check', 'color')">Color</label><br>
                     <label><input type="checkbox" id="eslo-check" onchange="showContent('eslo-check', 'eslora')">Eslora</label><br>
@@ -65,246 +108,222 @@
                     <label><input type="checkbox" id="largo-check" onchange="showContent('largo-check', 'largo')">Largo</label><br>
                     <label><input type="checkbox" id="ancho-check" onchange="showContent('ancho-check', 'ancho')">Ancho</label><br>
                     <label><input type="checkbox" id="alto-check" onchange="showContent('alto-check', 'alto')">Alto</label><br>
-                </div>
-
-                <div>
+                
                     <label><input type="checkbox" id="peso-check" onchange="showContent('peso-check', 'peso')">Peso</label><br>
                     <label><input type="checkbox" id="sup-check" onchange="showContent('sup-check', 'superf')">Superficie</label><br>
-                    <label><input type="checkbox" id="cuota-check" onchange="showContent('cuota-check', 'cuotas')">Cuotas (Precio de cada cuota)</label><br>
-                    <label><input type="checkbox" id="entrega-check" onchange="showContent('entrega-check', 'entrega')">Entrega en parte de pago</label><br>
                     <label><input type="checkbox" id="precio-check" onchange="showContent('precio-check', 'precio')">Precio TOTAL</label><br>
+                    <label><input type="checkbox" id="cuota-check" onchange="showContent('cuota-check', 'cuotas')">Cuotas (Cantidad e importe de cada cuota)</label><br>
+                    <label><input type="checkbox" id="entrega-check" onchange="showContent('entrega-check', 'entrega')">Entrega en parte de pago (Detallar el bien)</label><br>
                     <label><input type="checkbox" id="dosr-check" onchange="showContent('dosr-check', 'dosr')">2 renglones para escritura manual</label><br>
                     <label><input type="checkbox" id="cincor-check" onchange="showContent('cincor-check', 'cincor')">5 renglones para escritura manual</label><br>
                     <label><input type="checkbox" id="trans-check" onchange="showContent('trans-check', 'trans')">El bien require transferencia</label><br>
-                </div>
-        
-            </div>
-        
-        </div>
-
-        
-    
-        <div class="resto">
-        
-            <div class="buttpos">
-                <button class="button" onclick="print()" style="vertical-align:middle"><span>IMPRIMIR </span></button>
-            </div>
-
-            <hr>
-
-            <h2>Advertencia legal para el comprador</h2>
-
-            <p>
-                El boleto de compra venta es un documento de carácter NO público; por ende, el vendedor continuará siendo responsable civilmente hasta no realizarse el trámite de transferencia.<br>
-                Es decir, que el comprador no será "dueño legitimo" del bien al no efectuar la misma.<br>
-                <strong>Tenga en cuenta que evadir este trámite puede causarle problemas.</strong>
-            </p>
-
-            <hr>
-
-        </div>
-
-        <br>
-
-        <div class="VistaPrevia">
-
-            <header class="titlev">
-
-                <h1>Boleto Compra-Venta</h1>
-    
-            </header>
-    
-            <hr>
-    
-            
-            <p class="line">Conste por el presente que el señor/a:</p>
-            <p class="line"><span class="blank"></span>,</p>
-            <p class="line">DNI N°<span class="blank"></span>, E. Civil<span class="blank"></span>,</p>
-            <p class="line">Domiciliado en<span class="blank"></span>, localidad de <span class="blank"></span></p>
-            <p class="line">Teléfono:<span class="blank"></span>,VENDE Y CEDE al señor/a:</p>
-            <p class="line"><span class="blank"></span>,</p>
-            <p class="line">DNI N°<span class="blank"></span>, E. Civil<span class="blank"></span>,</p>
-            <p class="line">Domiciliado en<span class="blank"></span>, localidad de <span class="blank"></span></p>
-            <p class="line">Teléfono:<span class="blank"></span>,el siguiente bien:</p>
-            <p class="line"><span class="blank"></span>.</p>
-        
-            
-            <p>
-                <div id="marca" style="display: none;">
-                    <p class="line">Marca: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="modelo" style="display: none;">
-                    <p class="line">Modelo: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="modeloaño" style="display: none;">
-                    <p class="line">Modelo (año de fabricación): <span class="blank"></span>.</p>
-                </div>
-
-                <div id="tipo" style="display: none;">
-                    <p class="line">Tipo: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="dominio" style="display: none;">
-                    <p class="line">Dominio: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="nserie" style="display: none;">
-                    <p class="line">N° de Serie: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="nmotor" style="display: none;">
-                    <p class="line">N° de motor: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="nchasis" style="display: none;">
-                    <p class="line">N° de chasis: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="potencia" style="display: none;">
-                    <p class="line">Potencia (HP, CV, Watts): <span class="blank"></span>.</p>
-                </div>
-
-                <div id="color" style="display: none;">
-                    <p class="line">Color: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="eslora" style="display: none;">
-                    <p class="line">Eslora: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="manga" style="display: none;">
-                    <p class="line">Manga: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="puntal" style="display: none;">
-                    <p class="line">Puntal: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="largo" style="display: none;">
-                    <p class="line">Largo: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="ancho" style="display: none;">
-                    <p class="line">Ancho: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="alto" style="display: none;">
-                    <p class="line">Alto: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="peso" style="display: none;">
-                    <p class="line">Peso: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="superf" style="display: none;">
-                    <p class="line">Superficie: <span class="blank"></span>.</p>
-                </div>
-
-                <div id="cuotas" style="display: none;">
                     
-                    <p class="paragraph">
+            
+                </div>
+            
+            </div>
+
+                
+
+            <div class="VistaPrevia" id="b">
+
+                <header class="titlev">
+
+                    <h1 class="titulovp">Boleto Compra-Venta</h1>
+        
+                </header>
+                
+                <p class="line">Conste por el presente que el señor/a:</p>
+                <p class="line"><span class="blank"></span>,</p>
+                <p class="line">DNI N°<span class="blank"></span>, E. Civil<span class="blank"></span>,</p>
+                <p class="line">Domiciliado en<span class="blank"></span>, localidad de <span class="blank"></span></p>
+                <p class="line">Teléfono:<span class="blank"></span>,VENDE Y CEDE al señor/a:</p>
+                <p class="line"><span class="blank"></span>,</p>
+                <p class="line">DNI N°<span class="blank"></span>, E. Civil<span class="blank"></span>,</p>
+                <p class="line">Domiciliado en<span class="blank"></span>, localidad de <span class="blank"></span></p>
+                <p class="line">Teléfono:<span class="blank"></span>,el siguiente bien:</p>
+                <p class="line"><span class="blank"></span>.</p>
+            
+                
+                <p>
+                    <div id="marca" style="display: none;">
+                        <p class="line">Marca: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="modelo" style="display: none;">
+                        <p class="line">Modelo: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="modeloaño" style="display: none;">
+                        <p class="line">Modelo (año de fabricación): <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="tipo" style="display: none;">
+                        <p class="line">Tipo: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="dominio" style="display: none;">
+                        <p class="line">Dominio: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="nserie" style="display: none;">
+                        <p class="line">N° de Serie: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="nmotor" style="display: none;">
+                        <p class="line">N° de motor: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="nchasis" style="display: none;">
+                        <p class="line">N° de chasis: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="potencia" style="display: none;">
+                        <p class="line">Potencia (HP, CV, Watts): <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="color" style="display: none;">
+                        <p class="line">Color: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="eslora" style="display: none;">
+                        <p class="line">Eslora: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="manga" style="display: none;">
+                        <p class="line">Manga: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="puntal" style="display: none;">
+                        <p class="line">Puntal: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="largo" style="display: none;">
+                        <p class="line">Largo: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="ancho" style="display: none;">
+                        <p class="line">Ancho: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="alto" style="display: none;">
+                        <p class="line">Alto: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="peso" style="display: none;">
+                        <p class="line">Peso: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="superf" style="display: none;">
+                        <p class="line">Superficie: <span class="blank"></span>.</p>
+                    </div>
+
+                    <div id="precio" style="display: none;">
+                        <p class="line">Precio Total: <span class="blank"></span>(<span class="blank large"></span>).</p>
+                    </div>
+
+                    <div id="cuotas" style="display: none;">
                         
-                        <p class="line">
-                            El comprador abonará el saldo de <span class="blank"></span>(<span class="blank large"></span>)
-                            en <span class="blank short"></span> cuotas
-                        </p> 
-                        <p class="line">
-                            mensuales y consecutivas con el valor de <span class="blank"></span>(<span class="blank large"></span>), con
-                        </p> 
-                        <p class="line">vencimiento de la primera el día <span class="blank short"></span> de <span class="blank"></span>
-                            del año <span class="blank short"></span>, y las demás</p>
                         <p class="paragraph">
-                            cada treinta días, sucesivamente, hasta la cancelación de la deuda, a cuyo efecto se firman  
-                            igual número de pagarés, que representan las cuotas convenidas y la Prenda con Registro que  
-                            grava el bien vendido, con todas las formalidades establecidas en la Ley N° 12.962 en garantía del saldo deudor. 
+                            
+                            <p class="line">
+                                El comprador abonará el saldo de <span class="blank"></span>(<span class="blank large"></span>)
+                                en <span class="blank short"></span> cuotas
+                            </p> 
+                            <p class="line">
+                                mensuales y consecutivas con el valor de <span class="blank"></span>(<span class="blank large"></span>), con
+                            </p> 
+                            <p class="line">vencimiento, la primera el día <span class="blank short"></span> de <span class="blank"></span>
+                                del año <span class="blank short"></span>, y las demás</p>
+                            <p class="paragraph">
+                                cada treinta días, consecutivamente, hasta la cancelación de la deuda, a cuyo efecto se firman  
+                                igual número de pagarés, que representan las cuotas convenidas y la Prenda con Registro que  
+                                grava el bien vendido, con todas las formalidades establecidas en la Ley N° 12.962 en garantía del saldo deudor. 
+                            </p>
                         </p>
+                    
+                    </div>
+
+                    <div id="entrega" style="display: none;">
+                        <p class="line">El comprador entrega en parte de pago:<span class="blank"><br></span></p>
+                        <p class="line"><span class="blank"><br></span>.</p>
+                    </div>
+
+                    <div id="dosr" style="display: none;">
+                        <p class="line"><span class="blank"><br></span></p>
+                        <p class="line"><span class="blank"><br></span></p>
+                    </div>
+
+                    <div id="cincor" style="display: none;">
+                        <p class="line"><span class="blank"><br></span></p>
+                        <p class="line"><span class="blank"><br></span></p>
+                        <p class="line"><span class="blank"><br></span></p>
+                        <p class="line"><span class="blank"><br></span></p>
+                        <p class="line"><span class="blank"><br></span></p>
+                    </div>
+
+                    <div id="trans" style="display: none;">
+                        
+                        <p class="paragraph">El comprador se compromete a efectuar el correspondiente trámite de transferencia de dominio del vehículo 
+                        dentro de los <span class="blank short"></span> días de la fecha, de acuerdo a lo establecido al respecto por la Ley N° 22.977 y 
+                        sus normas interpretativas y/o complementarias, estando a su exclusivo cargo 
+                        la totalidad de los gastos que demande la misma y los trámites y gestiones pertinentes, incluyendo 
+                        la firma del formulario 08. Transcurrido dicho plazo sin que 
+                        realizara la transferencia, el vendedor no se responsabiliza por los inconvenientes de cualquier 
+                        índole que pudieran existir anteriores o posteriores a la fecha, que imposibilitan la efectivización 
+                        de dicho trámite, incluyendo embargos y/o prendas o medidas judiciales de cualquier tipo sobre el 
+                        vehículo, al igual que deudas emergentes de patentes municipales y/o multas. </p>
+                    </div>
+
+                </p>
+        
+                <p class="paragraph">
+                    El vendedor declara expresamente que el bien motivo del presente, no reconoce gravámenes de 
+                    ninguna naturaleza por prenda, embargo, depósito o préstamo, responsabilizándose por cualquier
+                    inconveniente que impidiera disponer libremente del mismo. Esta unidad se entrega en el estado  
+                    de uso en que se encuentra y que el comprador declara conocer, al igual que todo lo concerniente  
+                    a la marca, modelo, que ha sido revisado, constatado y acepta de plena conformidad, haciéndose
+                    responsable civil y criminalmente, a partir de la fecha y hora de efectuada esta venta por cualquier 
+                    accidente, daño y/o perjucio que pudiera ocasionar el bien que es recibido en este acto con su 
+                    documentación completa y al día.
+                </p>
+
+                <p class="paragraph single">
+                    En prueba de conformidad entre ambas partes, se firman dos ejemplares del mismo tenor y a 
+                
+                    <p class="line">
+                        un solo efecto en la ciudad de <span class="blank"></span> a los <span class="blank short"></span>
+                    </p> 
+
+                    <p class="line">
+                        días del mes de <span class="blank"></span> del año <span class="blank short"></span> .
                     </p>
                 
-                </div>
-
-                <div id="entrega" style="display: none;">
-                    <p class="line">El comprador entrega en parte de pago:<span class="blank"><br></span></p>
-                    <p class="line"><span class="blank"><br></span>.</p>
-                </div>
-
-                <div id="precio" style="display: none;">
-                    <p class="line">Precio Total: <span class="blank"></span>(<span class="blank large"></span>).</p>
-                </div>
-
-                <div id="dosr" style="display: none;">
-                    <p class="line"><span class="blank"><br></span></p>
-                    <p class="line"><span class="blank"><br></span></p>
-                </div>
-
-                <div id="cincor" style="display: none;">
-                    <p class="line"><span class="blank"><br></span></p>
-                    <p class="line"><span class="blank"><br></span></p>
-                    <p class="line"><span class="blank"><br></span></p>
-                    <p class="line"><span class="blank"><br></span></p>
-                    <p class="line"><span class="blank"><br></span></p>
-                </div>
-
-                <div id="trans" style="display: none;">
-                    
-                    <p class="paragraph">El comprador se compromete a efectuar el correspondiente trámite de transferencia de dominio del vehículo 
-                    dentro de los <span class="blank short"></span> días de la fecha, de acuerdo a lo establecido al respecto por la Ley N° 22.977 y 
-                    sus normas interpretativas y/o complementarias, estando a su exclusivo cargo 
-                    la totalidad de los gastos que demande la misma y los trámites y gestiones pertinentes, incluyendo 
-                    la firma del formulario 08. Transcurrido dicho plazo sin que 
-                    realizara la transferencia, el vendedor no se responsabiliza por los inconvenientes de cualquier 
-                    índole que pudieran existir anteriores o posteriores a la fecha, que imposibilitan la efectivización 
-                    de dicho trámite, incluyendo embargos y/o prendas o medidas judiciales de cualquier tipo sobre el 
-                    vehículo, al igual que deudas emergentes de patentes municipales y/o multas. </p>
-                </div>
-
-            </p>
-    
-            <p class="paragraph">
-                El vendedor declara expresamente que el bien motivo del presente, no reconoce gravámenes de 
-                ninguna naturaleza por prenda, embargo, depósito o préstamo, responsabilizándose por cualquier
-                inconveniente que impidiera disponer libremente del mismo. Esta unidad se entrega en el estado  
-                de uso en que se encuentra y que el comprador declara conocer, al igual que todo lo concerniente  
-                a la marca, modelo, que ha sido revisado, constatado y acepta de plena conformidad, haciéndose
-                responsable civil y criminalmente, a partir de la fecha y hora de efectuada esta venta por cualquier 
-                accidente, daño y/o perjucio que pudiera ocasionar el bien que es recibido en este acto con su 
-                documentación completa y al día.
-            </p>
-
-            <p class="paragraph single">
-                En prueba de conformidad entre ambas partes, se firman dos ejemplares del mismo tenor y a 
-             
-                <p class="line">
-                    un solo efecto en la ciudad de <span class="blank"></span> a los <span class="blank short"></span>
-                </p> 
-
-                <p class="line">
-                    días del mes de <span class="blank"></span> del año <span class="blank short"></span> .
                 </p>
-            
-            </p>
 
-            <br>
-    
-            <div class="firmas">
+                <br>
+        
+                <div class="firmas">
 
-                <div class="firma">
+                    <div class="firma">
 
-                    <strong>VENDEDOR</strong>
+                        <strong>VENDEDOR</strong>
+
+                    </div>
+
+                    <div class="firma">
+
+                        <strong>COMPRADOR</strong>
+
+                    </div>
+
 
                 </div>
 
-                <div class="firma">
-
-                    <strong>COMPRADOR</strong>
-
-                </div>
+                <br>
 
 
             </div>
-
-            <br>
 
 
         </div>
