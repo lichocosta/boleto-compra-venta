@@ -24,6 +24,16 @@
         <link rel="icon" type="image/png" sizes="16x16" href="favicon.img/favicon-16x16.png">
         <link rel="manifest" href="favicon.img/manifest.json">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+ 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178440131-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-178440131-1');
+        </script>
     </head>
 
     <body>
@@ -66,7 +76,7 @@
 
             <div class="sizebutton">
 
-                <p>¿No entra en un página? <br> 
+                <p>¿No entra en una página? <br> 
                     Modificá el tamaño con estos botones:
                 </p>
 
@@ -114,8 +124,8 @@
                     <label><input type="checkbox" id="precio-check" onchange="showContent('precio-check', 'precio')">Precio TOTAL</label><br>
                     <label><input type="checkbox" id="cuota-check" onchange="showContent('cuota-check', 'cuotas')">Cuotas (Cantidad e importe de cada cuota)</label><br>
                     <label><input type="checkbox" id="entrega-check" onchange="showContent('entrega-check', 'entrega')">Entrega en parte de pago (Detallar el bien)</label><br>
-                    <label><input type="checkbox" id="dosr-check" onchange="showContent('dosr-check', 'dosr')">2 renglones para escritura manual</label><br>
-                    <label><input type="checkbox" id="cincor-check" onchange="showContent('cincor-check', 'cincor')">5 renglones para escritura manual</label><br>
+                    <label><input type="checkbox" id="dosr-check" onchange="showContent('dosr-check', 'dosr')">2 renglones para escritura manual (Para detallar)</label><br>
+                    <label><input type="checkbox" id="cincor-check" onchange="showContent('cincor-check', 'cincor')">5 renglones para escritura manual (Para detallar)</label><br>
                     <label><input type="checkbox" id="trans-check" onchange="showContent('trans-check', 'trans')">El bien require transferencia</label><br>
                     
             
