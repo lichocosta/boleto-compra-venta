@@ -114,6 +114,10 @@ footer{
     line-height: 50px;
 }
 
+.thanks{
+    color: white;
+}
+
 .button {
     display: inline-block;
     border-radius: 4px;
@@ -155,12 +159,40 @@ footer{
     right: 0;
 }
 
-@media print {
-    
+.sizebutton{
+    font-weight: bold;
+}
 
+.aumentar, .disminuir {
+    border-radius: 4px;
+    margin: 10px;
+    height: 25px;
+    width: 100px;
+    font-weight: bold;
+}
+
+/*IMPRIMIR*/
+@media print {  
     .checkboxes, .adver, .titulo, .footer, .print {
         display: none;
         font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    }
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 575.98px) {
+    .container{
+        display: block;
+    }
+    .checkboxes{
+        width: auto;
+        margin-bottom: 2em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sizebutton{
+        width: 20%;
     }
 }
 

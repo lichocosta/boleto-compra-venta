@@ -1,14 +1,4 @@
-/*function showContent() {
-  element = document.getElementById("content");
-  check = document.getElementById("check");
-  if (check.checked) {
-      element.style.display='block';
-  }
-  else {
-      element.style.display='none';
-  }
-}*/
-
+/*MOSTRAR DIV*/
 function showContent(checkboxId, divId) {
   const div = document.getElementById(divId)
   const checkbox = document.getElementById(checkboxId)
@@ -20,6 +10,7 @@ function showContent(checkboxId, divId) {
   }
 }
 
+/*AUMENTAR*/
 function increaseFontSizeBy1px() {
   txt = document.getElementById('b');
   style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
@@ -27,6 +18,7 @@ function increaseFontSizeBy1px() {
   txt.style.fontSize = (currentSize + 1) + 'px';
 }
 
+/*DISMINUIR*/
 function decreaseFontSizeBy1px() {
   txt = document.getElementById('b');
   style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
