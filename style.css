@@ -1,13 +1,23 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: aliceblue;
+    background-color: #fff;
 }
 
 header{
     text-align: center;
 }
 
-.container{
+.heading{
+    font-weight: bold;
+
+}
+
+.titulo{
+    margin: 25px 5px 20px 5px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.containerrr{
     display: flex;
 }
 
@@ -15,20 +25,20 @@ header{
     background-color: #eee;
     padding: 12px;
     border-radius: 5px;
-    width: 30%;
+    min-width: 370px;
 }
 
 .checktitle{
-    margin-top: 0;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .inputs{
     font-weight: bold;
 }
 
-.inputs div{
-    width: 33%;
-    font-weight: bold;
+.inputs input{
+    margin-right: 7px;
 }
 
 .firmas{
@@ -45,15 +55,16 @@ header{
 
 .VistaPrevia{
     background-color: #eee;
-    max-width: 750px;
-    outline: 5px double #1C6EA4;
-    outline-offset: 3px;
-    margin-left: auto;
-    margin-right: auto;
+    /*outline: 5px double #1C6EA4;
+    outline-offset: 3px;*/
+    border: 5px double #1C6EA4;
+    padding: 7px;
+    font-size: 23px;
 }
 
 .titulovp{
     margin: 10px;
+    font-weight: bold;
 }
 
 .adver{
@@ -63,10 +74,17 @@ header{
 .print{
     text-align: center;
     display: flex;
+    margin: 20px 5px 20px 5px;
+    padding: 20px 0px 20px 0px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.titlev{
-    margin-top: -10px;
+.btn {
+    width: 150px;
+    height: 60px;
+    margin: auto;
+    font-weight: bold;
 }
 
 .line{
@@ -102,8 +120,7 @@ header{
 }
 
 .buttpos{
-    text-align: center;
-    margin: 20px auto;
+    margin: auto;
 }
 
 footer{
@@ -116,6 +133,12 @@ footer{
 
 .thanks{
     color: white;
+    text-decoration: none;
+}
+
+.thanks:hover {
+    color: white;
+    text-decoration: none;
 }
 
 .button {
@@ -161,19 +184,23 @@ footer{
 
 .sizebutton{
     font-weight: bold;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.sizebutton p {
+    margin: 0;
 }
 
 .aumentar, .disminuir {
     border-radius: 4px;
     margin: 10px;
-    height: 25px;
-    width: 100px;
     font-weight: bold;
 }
 
 /*IMPRIMIR*/
 @media print {  
-    .checkboxes, .adver, .titulo, .footer, .print {
+    .checkboxes, .adver, .titulo, .footer, .print, #dark-mode {
         display: none;
         font-family: 'Oswald', Arial, Helvetica, sans-serif;
     }
@@ -181,12 +208,15 @@ footer{
 
 /*MEDIA QUERIES*/
 @media (max-width: 575.98px) {
-    .container{
+    .containerrr{
         display: block;
     }
     .checkboxes{
         width: auto;
         margin-bottom: 2em;
+    }
+    .print{
+        display: block;
     }
 }
 
@@ -220,3 +250,26 @@ INPUT[type=checkbox]:checked
     background-color: #409fd6;
     background: #409fd6 url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 3px 3px no-repeat;
 }
+
+.dark {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    right: 23px;
+    bottom: 23px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    z-index: 997;
+}
+
+#dark-mode {
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+}
+
+html.dark-mode{
+    filter: invert(100%);
+}
+

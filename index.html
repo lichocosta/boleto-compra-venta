@@ -8,7 +8,6 @@
         <meta name="theme-color" content="#ffffff">
         <title>Boleto Compraventa ONLINE</title>
         <script src="main.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="style.css">
         <link rel="apple-touch-icon" sizes="57x57" href="favicon.img/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="favicon.img/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="favicon.img/apple-icon-72x72.png">
@@ -23,7 +22,17 @@
         <link rel="icon" type="image/png" sizes="96x96" href="favicon.img/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon.img/favicon-16x16.png">
         <link rel="manifest" href="favicon.img/manifest.json">
+
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css">
  
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178440131-1"></script>
@@ -38,68 +47,22 @@
 
     <body>
 
+        <label for="dark-mode" class="dark">
+            <input id="dark-mode" type="checkbox" onclick="document.documentElement.classList.toggle('dark-mode')">
+        </label>
+
         <div class="titulo">
-
             <header>
-
-                <h1>Boleto Compra-Venta ONLINE</h1>
-
+                <h1 class="heading">Boleto Compra-Venta ONLINE</h1>
             </header>
-
-        </div>
-        
-    
-        <div class="adver">
-        
-            <hr>
-
-            <h2>Advertencia legal para el comprador</h2>
-
-            <p>
-                El boleto de compra venta es un documento de carácter NO público; por ende, el vendedor continuará siendo responsable civilmente hasta no realizarse el trámite de transferencia.<br>
-                Es decir, que el comprador no será "dueño legitimo" del bien hasta no efectuar la misma.<br>
-                <strong>Tenga en cuenta que no realizar este trámite puede causarle problemas.</strong>
-            </p>
-
-            <hr>
-
         </div>
 
-
-        <div class="print">
-
-            
-            <div class="buttpos">
-                <button class="button" onclick="print()" style="vertical-align:middle"><span>IMPRIMIR </span></button>
-            </div>
-
-
-            <div class="sizebutton">
-
-                <p>¿No entra en una página? <br> 
-                    Modificá el tamaño con estos botones:
-                </p>
-
-                <input class="aumentar" type="button" value="AUMENTAR" onclick="increaseFontSizeBy1px()">
-
-                <input class="disminuir" type="button" value="DISMINUIR" onclick="decreaseFontSizeBy1px()">
-
-            </div>
-
-
-        </div>
-
-        <br>
-
-
-        <div class="container">
-
+        <div class="containerrr">
             <div class="checkboxes">
 
-                <h2 class="checktitle">De acuerdo al bien que necesitás <u>comprar</u> o <u>vender</u>, ¿qué datos querés que tenga? Tildá los necesarios:</h2>
+                <h2 class="checktitle">De acuerdo al bien que necesitás <u>comprar</u> o <u>vender</u>, ¿qué datos querés que tenga? <br> Tildá los necesarios:</h2>
 
                 <div class="inputs">
-
                     
                     <label><input type="checkbox" id="marca-check" onchange="showContent('marca-check', 'marca')">Marca</label><br>
                     <label><input type="checkbox" id="modelo-check" onchange="showContent('modelo-check', 'modelo')">Modelo</label><br>
@@ -128,9 +91,7 @@
                     <label><input type="checkbox" id="cincor-check" onchange="showContent('cincor-check', 'cincor')">5 renglones para escritura manual (Para detallar)</label><br>
                     <label><input type="checkbox" id="trans-check" onchange="showContent('trans-check', 'trans')">El bien require transferencia</label><br>
                     
-            
                 </div>
-            
             </div>
 
                 
@@ -138,9 +99,7 @@
             <div class="VistaPrevia" id="b">
 
                 <header class="titlev">
-
                     <h1 class="titulovp">Boleto Compra-Venta</h1>
-        
                 </header>
                 
                 <p class="line">Conste por el presente que el señor/a:</p>
@@ -154,7 +113,6 @@
                 <p class="line">Teléfono:<span class="blank"></span>,el siguiente bien:</p>
                 <p class="line"><span class="blank"></span>.</p>
             
-                
                 <p>
                     <div id="marca" style="display: none;">
                         <p class="line">Marca: <span class="blank"></span>.</p>
@@ -232,8 +190,7 @@
                         <p class="line">Precio Total: <span class="blank"></span>(<span class="blank large"></span>).</p>
                     </div>
 
-                    <div id="cuotas" style="display: none;">
-                        
+                    <div id="cuotas" style="display: none;">                     
                         <p class="paragraph">
                             
                             <p class="line">
@@ -250,8 +207,7 @@
                                 igual número de pagarés, que representan las cuotas convenidas y la Prenda con Registro que  
                                 grava el bien vendido, con todas las formalidades establecidas en la Ley N° 12.962 en garantía del saldo deudor. 
                             </p>
-                        </p>
-                    
+                        </p>                   
                     </div>
 
                     <div id="entrega" style="display: none;">
@@ -272,8 +228,7 @@
                         <p class="line"><span class="blank"><br></span></p>
                     </div>
 
-                    <div id="trans" style="display: none;">
-                        
+                    <div id="trans" style="display: none;">                        
                         <p class="paragraph">El comprador se compromete a efectuar el correspondiente trámite de transferencia de dominio del vehículo 
                         dentro de los <span class="blank short"></span> días de la fecha, de acuerdo a lo establecido al respecto por la Ley N° 22.977 y 
                         sus normas interpretativas y/o complementarias, estando a su exclusivo cargo 
@@ -307,42 +262,74 @@
 
                     <p class="line">
                         días del mes de <span class="blank"></span> del año <span class="blank short"></span> .
-                    </p>
-                
+                    </p>               
                 </p>
 
                 <br>
         
                 <div class="firmas">
-
                     <div class="firma">
-
                         <strong>VENDEDOR</strong>
-
                     </div>
 
                     <div class="firma">
-
                         <strong>COMPRADOR</strong>
-
                     </div>
-
-
                 </div>
 
                 <br>
 
-
             </div>
-
 
         </div>
 
-        <br>
+        <div class="print">
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Recordá que...
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Advertencia legal para el comprador</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                El boleto de compra venta es un documento de carácter NO público; por ende, el vendedor continuará siendo responsable civilmente hasta no realizarse el trámite de transferencia.<br>
+                                Es decir, que el comprador no será "dueño legitimo" del bien hasta no efectuar la misma.<br>
+                                <strong>Tenga en cuenta que no realizar este trámite puede causarle problemas.</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="buttpos">
+                <button class="button btn-primary" onclick="print()" style="vertical-align:middle"><span>¡IMPRIMIR!</span></button>
+            </div>
+
+
+            <div class="sizebutton">
+                <p>¿No entra en una página? <br> 
+                    Modificá el tamaño con estos botones:
+                </p>
+
+                <input class="aumentar btn-primary" type="button" value="Aumentar" onclick="increaseFontSizeBy1px()">
+
+                <input class="disminuir btn-primary" type="button" value="Disminuir" onclick="decreaseFontSizeBy1px()">
+            </div>
+
+        </div>
 
         <div class="footer">
-
-            <hr>
 
             <footer>
                 by Lisandro Costa Martorel &copy; <a class="thanks" href="thanks.html">2020</a>
