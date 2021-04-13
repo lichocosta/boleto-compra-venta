@@ -251,25 +251,3 @@ INPUT[type=checkbox]:checked
     background: #409fd6 url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 3px 3px no-repeat;
 }
 
-.dark {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    right: 23px;
-    bottom: 23px;
-    padding-top: 15px;
-    margin-bottom: 0;
-    z-index: 997;
-}
-
-#dark-mode {
-    border-radius: 20px;
-    width: 40px;
-    height: 40px;
-    background-color: black;
-}
-
-html.dark-mode{
-    filter: invert(100%);
-}
-
