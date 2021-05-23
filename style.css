@@ -19,17 +19,22 @@ header{
 
 .containerrr{
     display: flex;
+    padding: 0 20px 0 20px;
 }
 
 .checkboxes{
-    background-color: #eee;
+    background-color: #fff;
     padding: 12px;
     border-radius: 5px;
     min-width: 370px;
+    margin-right: 20px;
+    -webkit-box-shadow: 0px 1px 7px 3px rgba(0,0,0,0.4); 
+    box-shadow: 0px 1px 7px 3px rgba(0,0,0,0.4);
 }
 
 .checktitle{
-    font-size: 25px;
+    font-size: 24px;
+    line-height: 35px;
     font-weight: bold;
 }
 
@@ -58,7 +63,7 @@ header{
     /*outline: 5px double #1C6EA4;
     outline-offset: 3px;*/
     border: 5px double #1C6EA4;
-    padding: 7px;
+    padding: 10px;
     font-size: 23px;
 }
 
@@ -80,11 +85,12 @@ header{
     border-bottom: 1px solid #e0e0e0;
 }
 
-.btn {
+.bttn {
     width: 150px;
-    height: 60px;
+    height: 55px;
     margin: auto;
     font-weight: bold;
+    border-radius: 4px;
 }
 
 .line{
